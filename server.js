@@ -2,6 +2,7 @@ const express = require('express');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+const HOST = process.env.HOST || 'api.transmitpie.com';
 
 const transmitters = new Map();
 
@@ -111,6 +112,7 @@ app.get('/health', (req, res) => {
   res.json({
     status: 'ok',
     service: 'TransmitPie',
+    host: HOST,
     description: 'Build Logic HTTP Transmitter API',
     note: 'User-Agent is intentionally ignored and not accepted.'
   });
@@ -318,6 +320,6 @@ app.use((req, res) => {
   });
 });
 
-app.listen(PORT, () => {
-  console.log(`TransmitPie API running on http://localhost:${PORT}`);
+app.listen(PORT, HOST, () => {
+  console.log(`TransmitPie API running on http://${HOST}:${PORT}`);
 });
