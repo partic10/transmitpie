@@ -1,0 +1,21 @@
+{
+  "name": "transmitpie",
+  "version": "1.0.0",
+  "description": "REST API for Build Logic HTTP Transmitter - send, receive, and modify binary-ish data with GET/POST and header support",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [
+    "build-logic",
+    "roblox",
+    "http-transmitter",
+    "transmitpie",
+    "tomtom4500"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
